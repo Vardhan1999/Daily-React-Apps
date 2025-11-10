@@ -11,7 +11,7 @@ export default function App() {
         <div>
             {data.map(item => (
                 <div key={item.id}>
-                    <h3 onClick={() => setOpen(open === item.id ? null : item.id)}>{item.title}</h3>
+                    <h3 onClick={() => setItem(open === item.id ? null : item.id)}>{item.title}</h3>
                     {open === item.id && <p>{item.content}</p>}
                 </div>
             ))}
