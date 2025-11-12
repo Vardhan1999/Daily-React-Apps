@@ -4,8 +4,8 @@ export default function App() {
     const [seconds, setSeconds] = useState(0);
 
     useEffect(() => {
-        const interval = setInterval(() => setSeconds(prev => prev + 1), 1000);
-        return () => clearInterval(interval)
+        const interval = setTimeout(() => setSeconds(prev => prev + 1), 1000);
+        return () => clearTimeout(interval)
     }, [])
 
     return <h2>Timer : {seconds}s</h2>
