@@ -6,15 +6,10 @@ export default function App() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-
-        async function fetchUsers() {
-            const response = await fetch("https://jsonplaceholder.typicode.com/users");
-            const data = await response.json();
-            setUsers(data);
-            setLoading(false);
-        }
-        fetchUsers();
-
+        const response = await fetch("https://jsonplaceholder.typicode.com/users");
+        const data = await response.json();
+        setUsers(data);
+        setLoading(false);
     }, []);
 
     if (loading) {

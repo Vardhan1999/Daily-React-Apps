@@ -13,7 +13,6 @@ export default function App() {
             setUsers(data);
             setLoading(false);
         }
-        fetchUsers();
 
     }, []);
 
