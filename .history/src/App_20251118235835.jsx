@@ -12,9 +12,6 @@ export default function App() {
     return (
         <div>
             <img src={active} alt="Large" />
-            <div>
-                {images.map(image => (<img key={image.id} src={image.thumb} alt={`Image${image.id}`} onClick={() => setActive(image.large)} />))}
-            </div>
         </div>
     )
 }
