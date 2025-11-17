@@ -11,7 +11,7 @@ export default function App() {
         <div>
             <ul>{paginated.map(item => <li key={item}>{item}</li>)}</ul>
             <button disabled={page === 1} onClick={() => setPage(page - 1)}>Prev</button>
-            <button disabled={start + perPage >= items.length} onClick={() => setPage(page + 1)}>Next</button>
+            <button disabled={start + perPage >= items.length}>Next</button>
         </div>
     )
 }
