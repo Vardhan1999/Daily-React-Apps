@@ -24,13 +24,15 @@ export default function App() {
     }
 
     function removeFromCart(id) {
-        setCart(prev => (
+        setCart(prev =>
             prev
-                .map(item => (item.id === id) ? { ...item, qty: item.qty - 1 } : item)
+                .map(item =>
+                    item.id === id ? { ...item, qty: item.qty - 1 } : item
+                )
                 .filter(item => item.qty > 0)
-        ))
+        );
     }
-
+    
 
     const total = cart
         .reduce((sum, p) => sum + p.qty * p.price, 0)
