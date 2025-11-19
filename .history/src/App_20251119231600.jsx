@@ -25,7 +25,7 @@ export default function App() {
             setData(json);
         }
         catch (e) {
-            setErr(e.message);
+            setErr(e);
             setData(null);
         }
         finally {

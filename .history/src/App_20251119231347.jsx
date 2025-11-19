@@ -20,12 +20,9 @@ export default function App() {
             );
 
             if (!res.ok) throw new Error("City not found");
-
-            const json = await res.json();
-            setData(json);
         }
         catch (e) {
-            setErr(e.message);
+            setErr(e);
             setData(null);
         }
         finally {
@@ -45,9 +42,7 @@ export default function App() {
 
             {data && (
                 <div>
-                    <h4>{data.name} - {data.sys?.country}</h4>
-                    <p>Temp: {data.main?.temp}°C</p>
-                    <p>Weather: {data.weather?.[0]?.description}</p>
+                    <h4>{data.name} - {data.sys?.description}</h4>
                 </div>
             )}
         </div>

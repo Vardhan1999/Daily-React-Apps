@@ -22,10 +22,9 @@ export default function App() {
             if (!res.ok) throw new Error("City not found");
 
             const json = await res.json();
-            setData(json);
         }
         catch (e) {
-            setErr(e.message);
+            setErr(e);
             setData(null);
         }
         finally {
