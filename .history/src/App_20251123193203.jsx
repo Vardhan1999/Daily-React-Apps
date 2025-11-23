@@ -33,12 +33,6 @@ export default function App() {
         <div>
             <input placeholder="Search..." value={q} onChange={(e) => setQ(e.target.value)} />
             <p>Searching for:{debouncedQ}</p>
-
-            <ul>
-                {
-                    results.map((r) => (<li key={r}>{r}</li>))
-                }
-            </ul>
         </div>
     )
 }

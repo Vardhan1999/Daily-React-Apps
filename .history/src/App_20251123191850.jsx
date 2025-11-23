@@ -25,20 +25,7 @@ export default function App() {
         const items = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
 
         setResults(
-            items.filter((i) => i.toLowerCase().includes(debouncedQ.toLowerCase()))
+            items.filter((i) => i.toLowerCase().includes(debouncedQ.toLowerCase());
         )
-    }, [debouncedQ])
-
-    return (
-        <div>
-            <input placeholder="Search..." value={q} onChange={(e) => setQ(e.target.value)} />
-            <p>Searching for:{debouncedQ}</p>
-
-            <ul>
-                {
-                    results.map((r) => (<li key={r}>{r}</li>))
-                }
-            </ul>
-        </div>
-    )
+})
 }
