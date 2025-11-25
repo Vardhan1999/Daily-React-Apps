@@ -25,7 +25,7 @@ export default function App() {
         return (
             <div>
                 <h3>Review</h3>
-                <pre>{JSON.stringify(form, null, 2)}</pre>
+                <pre>{JSON.stringify(form, null, 3)}</pre>
 
                 <button onClick={prev}>Back</button>
                 <button onClick={() => alert("Submitted!")}>Submit</button>
