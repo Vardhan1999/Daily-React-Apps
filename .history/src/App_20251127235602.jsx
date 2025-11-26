@@ -1,14 +1,15 @@
 import { useState, useEffect } from "react";
 
 function useLocalStorage(key, initial) {
-    const [state, setState] = useState(() => {
+    const [state, useState] = useState(() => {
         try {
-            const raw = localStorage.getItem(key);
+            const raw = localStorage.getItem(key)
             return raw ? JSON.parse(raw) : initial;
-        } catch {
+        }
+        catch {
             return initial;
         }
-    });
+    })
 
     useEffect(() => {
         try {
@@ -20,16 +21,12 @@ function useLocalStorage(key, initial) {
 }
 
 export default function App() {
-    const [name, setName] = useLocalStorage("name", "");
+    const [name, setName] = useState("name", "");
 
     return (
         <div>
-            <input
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                placeholder="Your Name"
-            />
+            <input value={name} onChange={(e) => setName(e.target.value)} placeholder="Your Name" />
             <p>Hello, {name || "Stranger"}</p>
         </div>
-    );
+    )
 }
