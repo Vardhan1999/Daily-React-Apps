@@ -11,16 +11,7 @@ export default function App() {
             setTimeout(() => setCopied(false), 1500);
         }
         catch {
-            setCopied(false);
-            alert("Clipboard API unavailable");
+
         }
     }
-
-    return (
-        <div>
-            <input value={text} onChange={(e) => setText(e.target.value)} />
-            <button onClick={copy}>Copy</button>
-            {copied && <span>Copied!</span>}
-        </div>
-    )
 }

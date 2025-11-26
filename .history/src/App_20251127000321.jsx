@@ -20,7 +20,7 @@ export default function App() {
         <div>
             <input value={text} onChange={(e) => setText(e.target.value)} />
             <button onClick={copy}>Copy</button>
-            {copied && <span>Copied!</span>}
+            {copy && <span>Copied!</span>}
         </div>
     )
 }
