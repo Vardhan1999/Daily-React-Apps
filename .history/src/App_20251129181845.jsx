@@ -24,23 +24,24 @@ export default function App() {
 
     return (
         <ul>
-            {items.map((it, idx) => (
-                <li
-                    key={it}
-                    draggable
-                    onDragStart={(e) => onDragStart(e, idx)}
-                    onDragOver={onDragOver}
-                    onDrop={(e) => onDrop(e, idx)}
-                    style={{
-                        padding: 8,
-                        border: "1px solid #ccc",
-                        marginBottom: 4,
-                        cursor: "grab",
-                    }}
-                >
-                    {it}
-                </li>
-            ))}
+          {items.map((it, idx) => (
+            <li
+              key={it}
+              draggable
+              onDragStart={(e) => onDragStart(e, idx)}
+              onDragOver={onDragOver}
+              onDrop={(e) => onDrop(e, idx)}
+              style={{
+                padding: 8,
+                border: "1px solid #ccc",
+                marginBottom: 4,
+                cursor: "grab",
+              }}
+            >
+              {it}
+            </li>
+          ))}
         </ul>
-    );
+      );
+    }
 }
