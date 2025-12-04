@@ -8,7 +8,7 @@ export default function App() {
         if (!text.trim()) return;
 
         setTodos([...todos, { id: crypto.randomUUID(), text, completed: false }])
-        setText("");
+        setTodos("");
     }
 
     function toggleTodos(id) {

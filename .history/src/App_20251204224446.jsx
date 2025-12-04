@@ -8,7 +8,7 @@ export default function App() {
         if (!text.trim()) return;
 
         setTodos([...todos, { id: crypto.randomUUID(), text, completed: false }])
-        setText("");
+        setTodos("");
     }
 
     function toggleTodos(id) {
@@ -22,16 +22,7 @@ export default function App() {
     return (
         <>
             <h2>Todo List</h2>
-            <input value={text} onChange={(e) => setText(e.target.value)} placeholder="Enter a task" />
-            <button onClick={addTodos}>Add Task</button>
-
-            <ul>
-                {todos.map((todo) => (<li key={todo.id}>
-                    <input type="checkbox" checked={todo.completed} onChange={() => toggleTodos(todo.id)} />
-                    {todo.text}
-                    <button onClick={() => deleteTodo(todo.id)}>Delete</button>
-                </li>))}
-            </ul>
+            <input value={text} onChange={(e) => setText(e.target.validity)} placeholder="Enter a task" />
         </>
     )
 }
