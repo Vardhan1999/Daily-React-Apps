@@ -9,9 +9,6 @@ export default function App() {
     return (
         <div>
             <input placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)} />
-            <ul>
-                {filtered.map((item, idx) => (<li key={idx}>{item}</li>))}
-            </ul>
         </div>
     )
 }

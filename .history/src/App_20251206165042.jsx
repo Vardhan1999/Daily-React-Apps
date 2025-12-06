@@ -5,13 +5,4 @@ export default function App() {
     const items = ["Apple", "Banana", "Cherry", "Date", "Elderberry"];
 
     const filtered = items.filter(item => item.toLowerCase().includes(query.toLowerCase()));
-
-    return (
-        <div>
-            <input placeholder="Search..." value={query} onChange={(e) => setQuery(e.target.value)} />
-            <ul>
-                {filtered.map((item, idx) => (<li key={idx}>{item}</li>))}
-            </ul>
-        </div>
-    )
 }
