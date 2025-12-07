@@ -11,7 +11,6 @@ export default function App() {
         <dir>
             {data.map(item => (<div key={item.id}>
                 <h3 onClick={() => setOpen(open === item.id ? null : item.id)}>{item.title}</h3>
-                {open === item.id && <p>{item.content}</p>}
             </div>))}
         </dir>
     )
