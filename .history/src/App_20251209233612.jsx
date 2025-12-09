@@ -8,8 +8,7 @@ export default function App() {
             <button onClick={() => setOpen(true)}>Open Model</button>
             {open && (
                 <div>
-                    <div>Modal Content</div>
-                    <button onClick={() => setOpen(false)}>Close</button>
+
                 </div>
             )}
         </div>
