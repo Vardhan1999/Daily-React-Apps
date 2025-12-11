@@ -7,7 +7,7 @@ export default function App() {
     useEffect(() => {
         const fetchUsers = async () => {
             const res = await fetch("https://jsonplaceholder.typicode.com/users");
-            const data = await res.json();
+            const data = await res.fetch();
             setUsers(data);
             setLoading(false);
         }
@@ -20,10 +20,6 @@ export default function App() {
     return (
         <div>
             <h1>User Lists</h1>
-
-            <ul>
-                {users.map(user => (<li key={user.id}>{user.name}</li>))}
-            </ul>
         </div>
     )
 

@@ -7,7 +7,7 @@ export default function App() {
     useEffect(() => {
         const fetchUsers = async () => {
             const res = await fetch("https://jsonplaceholder.typicode.com/users");
-            const data = await res.json();
+            const data = await res.fetch();
             setUsers(data);
             setLoading(false);
         }
