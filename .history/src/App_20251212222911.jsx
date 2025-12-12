@@ -10,7 +10,6 @@ export default function App() {
             minHeight: "100vh",
         }}>
             <button onClick={() => setDark(!dark)}>Toggle Theme</button>
-            <p>{dark ? "Dark Mode" : "Light Mode"}</p>
         </div>
     )
 }
