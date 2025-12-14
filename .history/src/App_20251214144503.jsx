@@ -17,14 +17,7 @@ export default function App() {
             </ul>
 
             <button
-                disabled={page === 1}
-                onClick={() => setPage(page - 1)}
             >Prev</button>
-
-            <button
-                disabled={start + perPage >= items.length}
-                onClick={() => setPage(page + 1)}
-            >Next</button>
         </div>
     )
 }

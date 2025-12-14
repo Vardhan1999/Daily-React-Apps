@@ -22,8 +22,8 @@ export default function App() {
             >Prev</button>
 
             <button
-                disabled={start + perPage >= items.length}
-                onClick={() => setPage(page + 1)}
+                disabled={page === 1}
+                onClick={() => setPage(page - 1)}
             >Next</button>
         </div>
     )
