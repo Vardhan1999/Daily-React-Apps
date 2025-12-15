@@ -23,24 +23,6 @@ export default function App() {
     return (
         <div>
             <img src={active} alt="Large" style={{ width: "100%", maxWidth: 600 }} />
-
-            <div style={{ display: "flex", gap: 8, marginTop: 8 }}>
-                {images.map((img) => (
-                    <img
-                        key={img.id}
-                        src={img.thumb}
-                        alt={`Thumb ${img.id}`}
-                        style={{
-                            cursor: "pointer",
-                            border:
-                                active === img.large
-                                    ? "2px solid #000"
-                                    : "1px solid #ccc",
-                        }}
-                        onClick={() => setActive(img.large)}
-                    />
-                ))}
-            </div>
         </div>
     )
 }

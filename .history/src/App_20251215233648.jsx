@@ -1,0 +1,21 @@
+import { useState } from "react";
+
+export default function App() {
+    const images = [
+        {
+            id: 1,
+            thumb: "https://picsum.photos/id/101/100/75",
+            large: "https://picsum.photos/id/101/600/400",
+        },
+        {
+            id: 2,
+            thumb: "https://picsum.photos/id/102/100/75",
+            large: "https://picsum.photos/id/102/600/400",
+        },
+        {
+            id: 3,
+            thumb: "https://picsum.photos/id/101/100/75",
+            large: "https://picsum.photos/id/101/600/400",
+        },
+    ]
+}
